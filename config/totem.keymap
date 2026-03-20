@@ -20,7 +20,7 @@
 
 &mt {
     quick-tap-ms = <100>;
-    global-quick-tap;
+    require-prior-idle-ms = <125>;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
 };
@@ -58,7 +58,7 @@
             // |    `/~    |     Z     |     X     |
             bindings = <
                 &kp Q   &kp W       &kp E          &kp R         &kp T        &kp Y       &kp U        &kp I        &kp O                    &kp P
-                &hm A   &hm TAB S   &hm LALT D     &hm LCRTL F   &kp G        &kp H       &hm RCRTL J  &hm RALT K   &hm TAB L                &kp SEMICOLON
+                &kp A   &hm TAB S   &hm LALT D     &hm LCTRL F   &kp G        &kp H       &hm RCTRL J  &hm RALT K   &hm TAB L                &kp SEMICOLON
 &kp GRAVE       &kp Z   &kp X       &kp C          &kp V         &kp B        &kp N       &kp M        &kp COMMA    &mt EXCLAMATION DOT      &kp SLASH           &kp RGUI
                                     &mo 2          &kp BSPC      &mo 1        &kp RSHIFT  &kp SPACE    &kp MINUS
             >;
