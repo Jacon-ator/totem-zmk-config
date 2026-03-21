@@ -59,10 +59,11 @@
 
         Base {
             display-name = "Base";
-            // ----------------------------------------------
-            // |           |     Q     |     W     |     E     |           |           |           |           |           |           |           |
-            // |           |     A     |     S     |           |           |           |           |           |           |           |           |
-            // |    `/~    |     Z     |     X     |           |           |           |           |           |           |           |           |
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            // |           |     Q     |     W     |     E     |     R     |     T     |     Y     |     U     |     I     |     O     |     P     |           |
+            // |           |     A     |   S/TAB   |  D/LALT   | F/LCTRL   |     G     |     H     | J/RCTRL   |  K/RALT   |   L/TAB   | ;(ENTER)  |           |
+            // |   `/~     |     Z     |     X     |     C     |     V     |     B     |     N     |     M     |     ,     |   ./[!]   |     /     |   RGUI    |
+            // |                                   |    NUM    |   BSPC    |    NAV    |  RSHIFT   |   SPACE   |     -     |                                   |
             bindings = <
                 &kp Q   &kp W       &kp E          &kp R         &kp T        &kp Y       &kp U        &kp I        &kp O                    &kp P
                 &kp A   &hm TAB S   &hm LALT D     &hm LCTRL F   &kp G        &kp H       &hm RCTRL J  &hm RALT K   &hm TAB L                &mt ENTER SEMICOLON
@@ -73,10 +74,11 @@
 
         Nav {
             display-name = "Nav";
-            // ----------------------------------------------
-            // |           |           |           |           |           |           |           |           |           |           |           |
-            // |           |           |           |           |           |           |           |           |           |           |           |
-            // |           |           |           |           |           |           |           |           |           |           |           |
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            // |           |     !     |     @     |     #     |     $     |     %     |     ^     |     &     |    UP     |     '     |     "     |           |
+            // |           |    ---    |    ---    |    ---    |    ---    |    ---    |    ---    |   LEFT    |   DOWN    |   RIGHT   |    ---    |           |
+            // |  UNLOCK   |    ---    |    ---    |    ---    |    ---    |    ---    |     _     |     =     |    ---    |    ---    |     /     |   HOME    |
+            // |                                   |    ---    |    ---    |    ---    |    ---    |    ---    |    ---    |                                   |
             bindings = <
                 &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp UP_ARROW       &kp SQT         &kp DQT
                 &trans    &trans  &trans    &trans      &trans         &trans     &kp LEFT_ARROW &kp DOWN_ARROW     &kp RIGHT_ARROW &trans
@@ -87,10 +89,11 @@
 
         Num {
             display-name = "Num";
-            // ----------------------------------------------
-            // |           |           |           |           |           |           |           |           |           |           |           |
-            // |           |           |           |           |           |           |           |           |           |           |           |
-            // |           |           |           |           |           |           |           |           |           |           |           |
+            // ---------------------------------------------------------------------------------------------------------------------------------------------------------
+            // |           |     ~     |    ---    |    UP     |    ---    |     {     |     }     |     7     |     8     |     9     |    ---    |           |
+            // |           |  LSHIFT   |   LEFT    |   DOWN    |   RIGHT   |     [     |     ]     |     4     |     5     |     6     |    ---    |           |
+            // |   LALT    |   LWIN    |     -     |    ---    |     +     |     (     |     )     |     1     |     2     |     3     |    ---    |    ---    |
+            // |                                   |    ---    |    ---    |    ---    |    ---    |    ---    |     0     |                                   |
             bindings = <
                 &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
                 &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
