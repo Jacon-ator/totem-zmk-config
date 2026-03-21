@@ -78,8 +78,8 @@
             // |           |           |           |           |           |           |           |           |           |           |           |
             // |           |           |           |           |           |           |           |           |           |           |           |
             bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &UP_ARROW       &kp SQT         &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &LEFT_ARROW    &DOWN_ARROW     &RIGHT_ARROW    &trans
+                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp UP_ARROW       &kp SQT         &kp DQT
+                &trans    &trans  &trans    &trans      &trans         &trans     &kp LEFT_ARROW &kp DOWN_ARROW     &kp RIGHT_ARROW &trans
 &studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans          &trans          &kp SLASH  &kp HOME
                                   &trans    &trans      &trans         &trans     &trans         &trans
             >;
