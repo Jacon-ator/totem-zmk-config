@@ -38,7 +38,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -53,6 +53,29 @@
             bindings = <&kp ENTER>;
         };
      };
+
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -75,30 +98,30 @@
         Nav {
             display-name = "Nav";
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |           |     !     |     @     |     #     |     $     |     %     |     ^     |     &     |    UP     |     '     |     "     |           |
-            // |           |    ---    |    ---    |    ---    |    ---    |    ---    |    ---    |   LEFT    |   DOWN    |   RIGHT   |    ---    |           |
-            // |  UNLOCK   |    ---    |    ---    |    ---    |    ---    |    ---    |     _     |     =     |    ---    |    ---    |     /     |   HOME    |
-            // |                                   |    ---    |    ---    |    ---    |    ---    |    ---    |    ---    |                                   |
+            // |           |    ESC    |           |           |           |           |           |           |    UP     |    DEL    |    HOME   |           |
+            // |           |           |           |           |           |           |           |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
+            // |  UNLOCK   |           |           |    copy   |   paste   |           |           |           |           |           |           |           |
+            // |                                   |           |           |           |           |           |           |                                   |
             bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp UP_ARROW       &kp SQT         &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &kp LEFT_ARROW &kp DOWN_ARROW     &kp RIGHT_ARROW &trans
-&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans          &trans          &kp SLASH  &kp HOME
-                                  &trans    &trans      &trans         &trans     &trans         &trans
-            >;
+                &ESC      &trans  &trans    &trans      &trans      &kp K_PLAY_PAUSE &trans         &kp UP_ARROW    &kp DEL         &kp HOME
+                &trans    &trans  &trans    &trans      &trans      &trans           &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
+&trans          &trans    &trans  &copy     &paste      &trans      &trans           &trans         &trans          &trans          &trans  &trans
+                                  &trans    &trans      &trans      &trans           &trans         &trans
+        
         };
 
         Num {
             display-name = "Num";
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |           |     ~     |    ---    |    UP     |    ---    |     {     |     }     |     7     |     8     |     9     |    ---    |           |
-            // |           |  LSHIFT   |   LEFT    |   DOWN    |   RIGHT   |     [     |     ]     |     4     |     5     |     6     |    ---    |           |
-            // |   LALT    |   LWIN    |     -     |    ---    |     +     |     (     |     )     |     1     |     2     |     3     |    ---    |    ---    |
-            // |                                   |    ---    |    ---    |    ---    |    ---    |    ---    |     0     |                                   |
+            // |           |           |           |     (     |     )     |           |     *     |     7     |     8     |     9     |    =/+    |           |
+            // |           |           |           |     [     |     ]     |           |    '/"    |     4     |     5     |     6     |    -/_    |           |
+            // |           |           |           |     {     |     }     |           |     @     |     1     |     2     |     3     |           |           |
+            // |                                   |           |           |           |           |           |     0     |                                   |
             bindings = <
-                &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-                &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&kp LEFT_ALT    &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                           &trans        &trans     &trans      &trans    &trans        &kp NUMBER_0
+                &trans       &trans     &kp LPAR      &kp RPAR   &trans      &kp ASTERISK      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL
+                &trans       &trans     &kp LBKT      &kp RBKT   &trans      &kp SINGLE_QUOTE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans          &trans       &trans     &kp LBRC      &kp RBRC   &trans      &kp AT            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                        &trans        &trans     &trans      &trans            &trans        &kp NUMBER_0
                                   
             >;
         };
