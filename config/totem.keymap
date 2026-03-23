@@ -107,7 +107,7 @@
                 &trans    &trans  &trans    &trans      &trans      &trans           &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
 &trans          &trans    &trans  &copy     &paste      &trans      &trans           &trans         &trans          &trans          &trans  &trans
                                   &trans    &trans      &trans      &trans           &trans         &trans
-        
+            >;
         };
 
         Num {
