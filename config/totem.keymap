@@ -99,12 +99,12 @@
             display-name = "Nav";
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------
             // |           |    ESC    |           |           |           |           |           |           |    UP     |    DEL    |    HOME   |           |
-            // |           |           |           |           |           |           |           |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
+            // |           |    DEL    |           |           |           |           |           |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
             // |           |           |           |    copy   |   paste   |           |           |           |           |           |           |           |
             // |                                   |           |           |           |           |           |           |                                   |
-            bindings = <
+            bindings = <js
                 &kp ESC   &trans  &trans    &trans      &trans      &kp K_PLAY_PAUSE &trans         &kp UP_ARROW    &kp DEL         &kp HOME
-                &trans    &trans  &trans    &trans      &trans      &trans           &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
+                &kp DEL    &trans  &trans    &trans      &trans      &trans           &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
 &trans          &trans    &trans  &copy     &paste      &trans      &trans           &trans         &trans          &trans          &trans  &trans
                                   &trans    &trans      &trans      &trans           &trans         &trans
             >;
