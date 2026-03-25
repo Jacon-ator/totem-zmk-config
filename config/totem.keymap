@@ -75,7 +75,7 @@
                 ;
         };
 
-    &cmakerun:&cmakerun {
+        cmakerun: cmakerun {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -109,7 +109,7 @@
             display-name = "Nav";
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------
             // |           |    ESC    |           |           |           |           |           |           |    UP     |    DEL    |    HOME   |           |
-            // |           |    DEL    |           |           |           |           |           |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
+            // |           |    DEL    |           |  cmakerun |           |           |           |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
             // |           |           |           |    copy   |   paste   |           |           |           |           |           |           |           |
             // |                                   |           |           |           |           |           |           |                                   |
             bindings = <
