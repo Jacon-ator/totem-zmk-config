@@ -109,12 +109,12 @@
         Nav {
             display-name = "Nav";
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |           |    ESC    |    F7     |  cmakerun |           |      (    |     )    |           |    UP     |    DEL    |    HOME   |           |
+            // |           |    ESC    |    F7     |  cmakerun |           |      (    |     )     |   PAUSE   |    UP     |    DEL    |    HOME   |           |
             // |           |    DEL    |           |    ctrl   |           |      [    |     ]     |   LEFT    |   DOWN    |   RIGHT   |    END    |           |
             // |           |           |           |    copy   |   paste   |      {    |     }     |           |           |           |           |           |
             // |                                   |           |           |           |           |           |           |                                   |
             bindings = <
-                &kp ESC   &trans  &kp F7    &cmakerun   &kp LPAR    &kp RPAR  &trans         &kp UP_ARROW    &kp DEL         &kp HOME
+                &kp ESC   &trans  &kp F7    &cmakerun   &kp LPAR    &kp RPAR  &kp C_PP         &kp UP_ARROW    &kp DEL         &kp HOME
                 &kp DEL   &trans  &kp LALT  &kp LCTRL   &kp LBKT    &kp RBKT  &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
 &trans          &trans    &trans  &copy     &paste      &kp LBRC    &kp RBRC  &trans         &trans          &trans          &trans  &trans
                                   &trans    &trans      &trans      &trans    &trans         &trans
