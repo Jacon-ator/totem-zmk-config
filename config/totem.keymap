@@ -85,6 +85,35 @@
                 , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
+
+        type_secret: type_secret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+            = <&kp T>
+            , <&kp LS(S)>
+            , <&kp SLASH>
+            , <&kp LESS_THAN>
+            , <&kp N2>
+            , <&kp I>
+            , <&kp I>
+            , <&kp B>
+            , <&kp UNDERSCORE>
+            , <&kp TILDE>
+            , <&kp C>
+            , <&kp LS(R)>
+            , <&kp I>
+            , <&kp V>
+            , <&kp LS(D)>
+            , <&kp SEMICOLON>
+            , <&kp LS(T)>
+            , <&kp N3>
+            , <&kp N6>
+            , <&kp DOT>
+            ;
+        };
     };
 
 
@@ -114,9 +143,9 @@
             // |           |           |           |    copy   |   paste   |      {    |     }     |           |           |           |           |           |
             // |                                   |           |           |           |           |           |           |                                   |
             bindings = <
-                &kp ESC   &trans  &kp F7    &cmakerun   &kp LPAR    &kp RPAR  &kp C_PP         &kp UP_ARROW    &kp DEL         &kp HOME
+                &kp ESC   &trans  &kp F7    &cmakerun   &kp LPAR    &kp RPAR  &kp C_PP       &kp UP_ARROW    &kp DEL         &kp HOME
                 &kp DEL   &trans  &kp LALT  &kp LCTRL   &kp LBKT    &kp RBKT  &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW &kp END 
-&trans          &trans    &trans  &copy     &paste      &kp LBRC    &kp RBRC  &trans         &trans          &trans          &trans  &trans
+&trans          &trans    &trans  &copy     &paste      &kp LBRC    &kp RBRC  &trans         &trans          &trans          &trans  &type_secret
                                   &trans    &trans      &trans      &trans    &trans         &trans
             >;
         };
